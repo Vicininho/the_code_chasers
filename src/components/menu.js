@@ -16,22 +16,22 @@ function Menu() {
         <div>
           <ul>
             <li>
-                <Link to="/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/participants">Participantes</Link>
+              <Link to="/participants">Participantes</Link>
             </li>
             <li>
-                <Link to="/rewards">Prêmios</Link>
+              <Link to="/rewards">Prêmios</Link>
             </li>
             <li>
-                <Link to="/rewardsRegister">Cadastro de prêmios</Link>
+              <Link to="/rewardsRegister">Cadastro de prêmios</Link>
             </li>
             <li>
-                <Link to="/raffles">Sorteios</Link>
+              <Link to="/raffles">Sorteios</Link>
             </li>
             <li>
-                <Link to="/previousRaffles">Sorteios anteriores</Link>
+              <Link to="/previousRaffles">Sorteios anteriores</Link>
             </li>
           </ul>
         </div>
