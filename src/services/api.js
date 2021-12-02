@@ -1,26 +1,28 @@
 import axios from "axios";
 
+const API_URL = "http://104.131.23.234:3333";
+
 export const participants = () =>
   axios
-    .get("http://localhost:3312/contacts")
+    .get(`${API_URL}/contacts`)
     .then((response) => response.data)
     .catch((error) => console.log(error));
 
 export const prizes = () =>
   axios
-    .get("http://localhost:3312/prizes")
+    .get(`${API_URL}/prizes`)
     .then((response) => response.data)
     .catch((error) => console.log(error));
 
 export const sorts = () =>
   axios
-    .get("http://localhost:3312/sort")
+    .get(`${API_URL}/sort`)
     .then((response) => response.data)
     .catch((error) => console.log(error));
 
 export const createSorts = () =>
   axios
-    .post("http://localhost:3312/sort")
+    .post(`${API_URL}/sort`)
     .then((response) => response.data)
     .catch((error) => console.log(error));
 
@@ -31,7 +33,7 @@ export const createPrize = (data) => {
   formData.append("file", data.file);
 
   return axios
-    .post("http://localhost:3312/prizes", formData)
+    .post(`${API_URL}/prizes`, formData)
     .then((response) => response.data)
     .catch((error) => console.log(error));
 };
