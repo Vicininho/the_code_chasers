@@ -1,6 +1,5 @@
 import React from "react";
 import IkatecLogo from "../assets/Ikatec_Logo.jpg";
-
 import * as S from "../styles/home";
 
 function Home() {

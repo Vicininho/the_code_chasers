@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import IkatecLogo from "../assets/Ikatec_Logo.jpg";
 import { toast } from "react-toastify";
-
 import * as S from "../styles/participants";
 import * as H from "../styles/home";
 

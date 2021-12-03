@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import IkatecLogo from "../assets/Ikatec_Logo.jpg";
-
 import * as S from "../styles/participants";
 
 import { sorts } from "../services/api";

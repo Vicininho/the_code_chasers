@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import IkatecLogo from "../assets/Ikatec_Logo.jpg";
 import checkIcon from "../assets/check-square.svg";
-
 import * as S from "../styles/participants";
 
 import { participants } from "../services/api";
