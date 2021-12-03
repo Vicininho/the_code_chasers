@@ -9,8 +9,7 @@ function Home() {
       <h1>Bem-vindo ao sorteador "The Code Chasers"!</h1>
       <a>
         Esse projeto foi desenvolvido com o intuito de facilitar o processo de
-        organização de sorteios, permitindo:
-        <br /> Monitoramento de sorteios já realizados, lista de participantes,
+        organização de sorteios, permitindo que o usuário monitore os sorteios já realizados,f lista de participantes,
         lista de recompensas.
         <br />
         Cadastro de novas recompensas
