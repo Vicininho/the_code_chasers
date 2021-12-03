@@ -1,40 +1,67 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import menuIcon from "../assets/menu.svg";
+import giftIcon from "../assets/gift.svg";
+import listIcon from "../assets/list.svg";
+import usersIcon from "../assets/users.svg";
+import homeIcon from "../assets/home.svg";
+import closeIcon from "../assets/x.svg";
+import awardIcon from "../assets/award.svg";
+import shuffleIcon from "../assets/shuffle.svg";
+
+import * as S from "../styles/menu";
+
 function Menu() {
   const [openMenu, setOpenMenu] = useState(false);
-  function trocarValor() {
+  function handleToggleMenu() {
     setOpenMenu(!openMenu);
   }
 
   return (
     <div>
-      <button onClick={trocarValor}>
-        {openMenu === true ? "Fechar" : "Abrir"}
-      </button>
+      {!openMenu && (
+        <S.ButtonOpen onClick={handleToggleMenu}>
+          <img src={menuIcon} />
+        </S.ButtonOpen>
+      )}
       {openMenu === true ? (
-        <div>
+        <S.Container>
+          {openMenu && (
+            <S.ButtonClose onClick={handleToggleMenu}>
+              {" "}
+              <img src={closeIcon} />
+            </S.ButtonClose>
+          )}
           <ul>
-            <li>
+            <S.Item onClick={handleToggleMenu}>
+              <img src={homeIcon} />
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </S.Item>
+            <S.Item onClick={handleToggleMenu}>
+              <img src={usersIcon} />
               <Link to="/participants">Participantes</Link>
-            </li>
-            <li>
+            </S.Item>
+            <S.Item onClick={handleToggleMenu}>
+              <img src={giftIcon} />
               <Link to="/rewards">Prêmios</Link>
-            </li>
-            <li>
+            </S.Item>
+            <S.Item onClick={handleToggleMenu}>
+              <img src={awardIcon} />
               <Link to="/rewardsRegister">Cadastro de prêmios</Link>
-            </li>
-            <li>
-              <Link to="/raffles">Sorteios</Link>
-            </li>
-            <li>
+            </S.Item>
+
+            <S.Item onClick={handleToggleMenu}>
+              <img src={listIcon} />
               <Link to="/previousRaffles">Sorteios anteriores</Link>
-            </li>
+            </S.Item>
+
+            <S.Item onClick={handleToggleMenu}>
+              <img src={shuffleIcon} />
+              <Link to="/raffles">Sortear</Link>
+            </S.Item>
           </ul>
-        </div>
+        </S.Container>
       ) : null}
     </div>
   );
